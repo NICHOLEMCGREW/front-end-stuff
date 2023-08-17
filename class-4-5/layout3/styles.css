@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+header, footer {
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    height: 50px;
+    clear: both;
+}
+.small {
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    height: 300px;
+    width: 20%;
+    float: left;
+}
+.big {
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    height: 300px;
+    width: 40%;
+    float: left;
+}

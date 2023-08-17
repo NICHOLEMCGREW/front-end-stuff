@@ -1,0 +1,62 @@
+* {
+    background: rgb(124, 204, 230);
+}
+body {
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+section {
+    padding: 10px;
+    margin: 10px;
+}
+.container {
+    border: 5px solid rgb(73, 211, 73);
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: it;
+    font-style: italic;
+}
+nav {
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+nav li {
+    display: inline-block;
+    text-decoration: none;
+}
+.about-us {
+    color: white;
+    font-weight: bolder;
+
+}
+a {
+    color: rgb(52, 184, 140);
+    font-weight: bolder;
+}
+h2 {
+    font-weight: bold;
+}
+p {
+    padding: 5px;
+    line-height: 1.5;
+}
+img {
+    height: 225px;
+    float: right;
+    margin: 5px;
+    padding-left: 25px;
+}
+.opto {
+    color: darkgray;
+    font-weight: bolder;
+}
+footer {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
