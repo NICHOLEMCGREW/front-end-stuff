@@ -1,0 +1,213 @@
+*{
+    box-sizing: border-box;
+    /* text-align: center; */
+    letter-spacing: .5px;
+    font-family: 'Roboto';
+}
+
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+    clear: both;
+}
+
+/***************************************
+/* NAVBAR 
+/***************************************/
+main {
+
+    background: rgb(123, 132, 163);
+    height: 400px;
+    color: white;
+}
+nav {
+    font-size: 15px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid rgb(220, 209, 209);
+    margin: 20px;
+    padding: 12px 25px;
+    font-weight: 700;
+}
+nav a{
+    /* margin-right: 40px; */
+}
+nav li{
+    list-style: none;
+    text-decoration: none;
+    float: left;
+}
+nav li a{
+    float: left;
+    color: white;
+    /* position: fixed; */
+    top: 0;
+    margin: 7px;
+    /* left: 0; */
+    border: none;
+    padding: 0px;
+}
+nav img{
+    position: absolute;
+  top: 10;
+  left: 10;
+  width: 1%;
+  margin-left: 980px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+    
+}
+.button.donate {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.button{
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 3px;
+    padding: 6px;
+    font-size: 13px;
+}
+
+/***************************************
+/* TOP 
+/***************************************/
+
+.top{
+    background: rgb(123, 132, 163);
+    color: white;
+    height: 40%;
+    display: block;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 50px;
+}
+.topP{
+    width: 850px;
+    margin-left: 755px;
+}
+.top span{
+    display: block;
+}
+.movie{
+    margin: 25px 0px;
+}
+.big{
+    margin: 50px 0px;
+    color: black;
+}
+/***************************************
+/* WHY 
+/***************************************/
+
+.why{
+    background: white;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 75px;
+    height: 20%;
+}
+h2{
+    font-size: 30px;
+    padding: 0;
+    margin: 0px;
+}
+
+/***************************************
+/* BOTTOM 
+/***************************************/
+
+.bottom{
+    background: rgb(227, 229, 232);
+    /* width: 50%; */
+    /* margin: 10px; */
+    text-align: center;
+    padding: 75px;
+    height: 20%;
+    /* border: 1px solid black; */
+}
+.bottom-left, .bottom-right{
+    background: rgb(227, 229, 232);
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    padding: 25px;
+    height: 20%;
+    display: inline-block;
+}
+.button.bottom{
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/***************************************
+/* VOLUNTEER 
+/***************************************/
+
+.volunteer{
+    background: white;
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    text-align: center;
+    padding: 75px;
+}
+.volunteer > p{
+    margin-bottom: 40px;
+}
+
+/***************************************
+/* FOOTER 
+/***************************************/
+footer{
+    background: rgb(1, 1, 39);
+    height: 200px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+footer.left{
+    float: left;
+
+}
+footer.right{
+    float: right;
+}
+.bottom-bottom{
+    /* border-top: 1px solid white; */
+    /* height: 5px; */
+    float: left;
+}
+#bottom-bottom{
+    float: right;
+}
+footer li{
+    float: left;
+    width: 100px;
+}
+footer h4{
+    float: right;
+    width: 185px;
+}
+address{
+    float: right;
+}

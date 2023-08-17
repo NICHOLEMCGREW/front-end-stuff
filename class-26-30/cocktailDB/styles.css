@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    width: 400px;
+    height: 221px;
+    background-position: center;
+    background-size: cover;
+    background-image: url();
+}
