@@ -1,6 +1,6 @@
-console.log('Nichole', 37)
+// console.log('Nichole', 37)
 
-console.log(6 + 3, 6 - 3, 6*3, 6/3)
+// console.log(6 + 3, 6 - 3, 6*3, 6/3)
 
 // let fName = prompt('what is your first name?')
 // let lName = prompt('what is your last name?')
@@ -10,7 +10,7 @@ console.log(6 + 3, 6 - 3, 6*3, 6/3)
 let price = 10
 // prompt('Enter a price.')
 let result = price * 1.206
-console.log(result)
+// console.log(result)
 
 
 // celsius = prompt('what is the temp in C?')
@@ -76,7 +76,112 @@ let userDay = ''
 // }
 
 
-let hour = (+prompt('enter an hour between 0 and 23'))
-let minute = (+prompt('enter an minute between 0 and 59'))
-let second = (+prompt('enter an second between 0 and 59'))
+// let hour = (+prompt('enter an hour between 0 and 23'))
+// let minute = (+prompt('enter an minute between 0 and 59'))
+// let second = (+prompt('enter an second between 0 and 59')) + 1
 
+// if (second === 60) {
+//     second = 0
+//     minute++
+//     if (minute === 60) {
+//         minute = 0
+//         hour ++
+//         if (hour === 24) {
+//             hour = 0
+//             // minute = 0
+//             // second = 0
+//         }
+//     }
+// }
+
+// console.log(`${hour}h${minute}m${second}s`)
+
+
+function sayHello(firstName, lastName) {
+    const message = `Hello, ${firstName} ${lastName}`
+    return message
+}
+
+// let firstName = prompt('enter first name')
+// let lastName = prompt('enter last name')
+
+// console.log(sayHello(firstName, lastName))
+
+function square1(x) {
+    return Math.pow(x,2) 
+}
+
+const square2 = x => x**2
+
+// console.log(square1(0));
+// console.log(square1(2));
+// console.log(square1(5));
+// console.log(square2(0));
+// console.log(square2(2));
+// console.log(square2(5));
+
+function square1() {
+    for (let i = 0; i <= 10; i++) {
+        // console.log(Math.pow(i,2))
+    }
+}
+square1(2)
+
+function square1(x) {
+    while (x <= 10) {
+        // console.log(Math.pow(x,2))
+        x++
+    }
+}
+square1(2)
+
+
+const min = (num1, num2) => {
+    if (num1 < num2 || num1 === num2) {
+        return num1;
+    } else {
+        return num2
+    }
+}
+
+// console.log(min(4.5, 5))
+
+// Calculator
+
+function calculate (num1, oper, num2) {
+    switch (oper) {
+        case '+':
+            return num1 + num2;
+            break;
+        case '-':
+            return num1 - num2;
+            break;
+        case '*':
+            return num1 * num2;
+            break;
+        case '/':
+            return num1 / num2;
+            break;
+
+    }
+}
+
+// console.log(calculate(4, '+', 6))
+// console.log(calculate(4, '-', 6))
+// console.log(calculate(4, '*', 6))
+// console.log(calculate(4, '/', 6))
+
+// Circumference and area
+
+// console.log(2 ** 3);
+// console.log(3 ** 2);
+
+// circ = 2pi(r)
+// area = pi(r)^2
+
+const circ = radius => 2 * Math.PI * radius
+const area = radius => Math.PI * (radius ** 2)
+
+let radius = 1;
+
+console.log(`the area of a circle with radius ${radius} is ${area(radius)} and the circumference is ${circ(radius)}`)
