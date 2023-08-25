@@ -184,4 +184,4 @@ const area = radius => Math.PI * (radius ** 2)
 
 let radius = 1;
 
-console.log(`the area of a circle with radius ${radius} is ${area(radius)} and the circumference is ${circ(radius)}`)
+// console.log(`the area of a circle with radius ${radius} is ${area(radius)} and the circumference is ${circ(radius)}`)
