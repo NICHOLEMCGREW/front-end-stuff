@@ -2,6 +2,9 @@
 initBoard()
 initCatRow()
 
+document.querySelector('button').addEventListener('click', buildCategories)
+//create category row
+
 function initCatRow() {
     let catRow = document.getElementById('category-row')
     
@@ -11,6 +14,8 @@ function initCatRow() {
         catRow.appendChild(box)
     }
 }
+
+//create clue board
 
 function initBoard() {
     let board = document.getElementById('clue-board')
@@ -34,9 +39,13 @@ function initBoard() {
     }
 }
 
+//call aPI
+
 function randInt() {
     return Math.floor(Math.random() * (18418) + 1)
 }
+
+let catArray = []
 
 function buildCategories() {
 
@@ -64,14 +73,38 @@ function buildCategories() {
         `https://jservice.io/api/category?&id=${randInt()}`
     ).then((res) => res.json());
 
+
     const allData = Promise.all([fetchReq1,fetchReq2,fetchReq3,fetchReq4,fetchReq5,fetchReq6])
 
     allData.then((res) => {
         console.log(res)
+        catArray = res
+        setCategories(catArray)
     })
 
 }
 
-function getClue() {
+//load categories to the board
 
+function setCategories (catArray) {
+    let element = document.getElementById('category-row')
+        let children = element.children;
+        for(let i=0; i<children.length; i++) {
+            children[i].innerHTML = catArray[i].title
+        }
+}
+
+//figure out which item was clicked
+
+function getClue(event) {
+    let child = event.currentTarget
+    child.classList.add('clicked-box')
+    let boxValue = child.innerHTML.slice(1)
+    let parent = child.parentNode
+    let index = Array.prototype.findIndex.call(parent.children, (c) => c === child)
+    let cluesList = catArray[index].clues
+    let clue = cluesList.find(obj => {
+        return obj.value == boxValue
+    })
+    showQuestion(clue, child, boxValue)
 }
