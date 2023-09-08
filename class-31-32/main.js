@@ -35,7 +35,8 @@ class Dog extends DomesticAnimal {
 }
 
 let simba = new Dog('Simba', 'Shepard', 'Large')
-console.log(simba)
+// console.log(simba)
 
 
 // let farmAnimals = new DomesticAnimal
+
