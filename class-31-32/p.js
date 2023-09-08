@@ -6,44 +6,32 @@ class Animal{
         return this._name
     }
     speak() {
-        console.log(`${this._name} make a sound`)
+        console.log(`${this._name} makes a sound`)
     }
 }
 
-class Dog extends Animal {
+class DomesticAnimal extends Animal {
     constructor(name, breed) {
         super(name)
-        this._breed = breed
+        this.breed = breed
     }
     get breed() {
         return this._breed
     }
     speak() {
         super.speak()
-        console.log(`${this.name} barks`)
     }
 }
 
-class Cat extends Animal {
-    constructor(name, breed) {
+class Dog extends DomesticAnimal {
+    constructor(name, breed, size) {
         super(name)
         this._breed = breed
-    }
-    get breed(){
-        return this._breed
+        this.size = size
     }
     speak() {
         super.speak()
-        console.log(`${this.name} meows`)
     }
 }
 
-let simba = new Dog('Simba', 'Shepard')
-let machi = new Dog('The Machine', 'Pitbull')
-let salem = new Cat('Mr Meows', 'long hair')
-
-let farm = [simba, machi, salem]
-
-for (a of farm ) {
-    a.speak()
-}
+let simba = new Dog('Simba', 'Shepard', 'Large')
