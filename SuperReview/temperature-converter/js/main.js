@@ -1,15 +1,14 @@
-//Write your pseduo code first! 
+// c to f 
+document.querySelector('h1').addEventListener('click', cToF)
 
+function cToF() {
+    // need the value in c 
+    let temp = Number(document.querySelector('input').value)
+    // convert c to f 
+temp = temp * 1.8 + 32
 
-document.querySelector('button').addEventListener('click', convert)
+// show the value
 
-function convert() {
- //  get value
- let enteredVal = Number(document.querySelector('input').value)
-// convert value c to f
-let temp = enteredVal * 1.8 + 32
-// show value to user
-document.querySelector('h2').innerText = temp;
+document.querySelector('h2').innerText = temp
 }
-
 

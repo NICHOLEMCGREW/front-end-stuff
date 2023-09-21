@@ -4,7 +4,8 @@
 
 function savageSays() {
     for (let i = 1; i <= 21; i++) {
-        document.querySelector('h2').innerText += ' 21'
+        // console.log('21')
+        document.querySelector('h2').innerText += '21 '
     }
 }
 savageSays()
