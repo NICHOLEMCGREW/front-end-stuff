@@ -58,3 +58,17 @@ let currentHeadPosition = TOTAL_PIXEL_COUNT/2
 // Set initial length 
 let snakeLength = 200
 
+//Start moving snake
+const moveSnake = () => {
+    switch(snakeCurrentDirection) {
+        case LEFT_DIR:
+            --currentHeadPosition
+            const isHeadAtLeft = currentHeadPosition % LINE_PIXEL_COUNT ==
+            LINE_PIXEL_COUNT - 1 || currentHeadPosition < 0
+            if (isHeadAtLeft) {
+                currentHeadPosition = currentHeadPosition + LINE_PIXEL_COUNT
+            }
+            break;
+        
+    }
+}
