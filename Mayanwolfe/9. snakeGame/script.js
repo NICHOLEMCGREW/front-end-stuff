@@ -15,3 +15,24 @@ const createGameBoardPixels = () => {
     gameContainer.innerHTML = `${gameContainer.innerHTML} <div class="gameBoardPixel" id = "pixel${i}"></div>`;
   }
 }
+
+//Shorten references to game pixels
+const gameBoardPixels = document.getElementsByClassName("gameBoardPixel")
+
+let currentFoodPosition = 0
+
+//create the randomly generated food items in the game board
+const createFood = () => {
+  gameBoardPixels[currentFoodPosition].classList.remove("food")
+currentFoodPosition = Math.floor(Math.random()*TOTAL_PIXEL_COUNT)
+gameBoardPixels[currentFoodPosition].classList.add('food')
+}
+
+// Start setting up snake behavior 
+
+const LEFT_DIR = 37
+const UP_DIR = 38
+const RIGHT_DIR = 39
+const DOWN_DIR = 40
+
+let snakeCurrentDirection = RIGHT_DIR
