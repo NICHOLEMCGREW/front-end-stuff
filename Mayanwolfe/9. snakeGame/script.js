@@ -28,7 +28,7 @@ currentFoodPosition = Math.floor(Math.random()*TOTAL_PIXEL_COUNT)
 gameBoardPixels[currentFoodPosition].classList.add('food')
 }
 
-// Start setting up snake behavior 
+//Start setting up snake behavior
 
 const LEFT_DIR = 37
 const UP_DIR = 38
@@ -37,23 +37,23 @@ const DOWN_DIR = 40
 
 let snakeCurrentDirection = RIGHT_DIR
 
-// Make sure that the user input is valid and change snake direction variable
+//Make sure that the user input is valid and change snake direction variable
 const changeDirection = newDirectionCode => {
-    if (newDirectionCode == snakeCurrentDirection) return;
+  if(newDirectionCode == snakeCurrentDirection) return;
 
-    if (newDirectionCode == LEFT_DIR && snakeCurrentDirection !== RIGHT_DIR) {
-        snakeCurrentDirection = newDirectionCode
-    } else if (newDirectionCode == UP_DIR && snakeCurrentDirection!== DOWN_DIR) {
-        snakeCurrentDirection = newDirectionCode
-    } else if (newDirectionCode == RIGHT_DIR && snakeCurrentDirection !== LEFT_DIR) {
-        snakeCurrentDirection = newDirectionCode
-    } else if (newDirectionCode == DOWN_DIR && snakeCurrentDirection !== UP_DIR) {
-        snakeCurrentDirection == newDirectionCode
-    }
+  if (newDirectionCode == LEFT_DIR && snakeCurrentDirection !== RIGHT_DIR) {
+    snakeCurrentDirection = newDirectionCode
+  } else if(newDirectionCode == UP_DIR && snakeCurrentDirection !== DOWN_DIR) {
+    snakeCurrentDirection = newDirectionCode
+  }else if (newDirectionCode == RIGHT_DIR && snakeCurrentDirection !== LEFT_DIR) {
+    snakeCurrentDirection = newDirectionCode
+  } else if (newDirectionCode == DOWN_DIR && snakeCurrentDirection !== UP_DIR) {
+    snakeCurrentDirection = newDirectionCode
+  }
 }
 
-// set strarting point for snake on load 
-let currentHeadPosition = TOTAL_PIXEL_COUNT/2 
+//set starting point for snake on load
+let currentHeadPosition = TOTAL_PIXEL_COUNT/2
 
 // Set initial length 
 let snakeLength = 200
@@ -106,10 +106,43 @@ const moveSnake = () => {
 
     //Assuming an empty pixel, add snake body styling
     nextSnakeHeadPixel.classList.add('snakeBodyPixel')
+
+    //Remove snake styling to keep snake appropriate length
+    setTimeout(() => {
+        nextSnakeHeadPixel.classList.remove('snakeBodyPixel')
+    }, snakeLength)
+
+    //Describe what to do if the snake encounters a food pixel
+    if (currentHeadPosition == currentFoodPosition) {
+        totalFoodEaten++
+        document.getElementById('pointsEarned').innerText = totalFoodEaten
+        snakeLength = snakeLength + 100
+        createFood()
+    }
+
+    //Added distance traveled count
+    totalDistanceTraveled++
+    document.getElementById('blocksTraveled').innerText = totalDistanceTraveled
 }
 
+//Call initial functions to create board and start game
 createGameBoardPixels();
 
 createFood();
 
+//set animation
 let moveSnakeInterval = setInterval(moveSnake, 100)
+
+addEventListener('keydown', e => changeDirection(e.keyCode))
+
+//Adding event listeners for on-screen buttons
+const leftButton = document.getElementById('leftButton')
+const rightButton = document.getElementById('rightButton')
+const upButton = document.getElementById('upButton')
+const downButton = document.getElementById('downButton')
+
+//Add listeners for on-screen buttons
+leftButton.onclick = () => changeDirection(LEFT_DIR)
+rightButton.onclick = () => changeDirection(RIGHT_DIR)
+upButton.onclick = () => changeDirection(UP_DIR_DIR)
+downButton.onclick = () => changeDirection(DOWN_DIR)
