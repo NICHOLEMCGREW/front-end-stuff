@@ -100,7 +100,7 @@ const moveSnake = () => {
     //Check if snake head is about to intersect with its own body
     if (nextSnakeHeadPixel.classList.contains("snakeBodyPixel")) {
       clearInterval(moveSnakeInterval)
-      alert(`You have eaten ${totalFoodEaten} food and traveled ${totalDistanceTraveled} blocks.`)
+    //   alert(`You have eaten ${totalFoodEaten} food and traveled ${totalDistanceTraveled} blocks.`)
       window.location.reload()
     }
 
