@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+    clear: both;
+}
+img{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/***************************************
+/* HEADER
+/***************************************/
+
+header {
+   height: 55px; 
+   background-color: black;
+   color: white;
+   font-weight: 700;
+    
+}
+nav * {
+    float: left;
+    width: 10%;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+nav ul {
+    width: 55%;
+}
+nav form input {
+    width: 100%;
+    height: 25px;
+    float: right;
+    margin: 10px -270px;
+}
+nav li{
+    text-align: center;
+    box-sizing: inherit;
+    margin: 5px 25px;
+    align-items: center;
+    width: auto;
+    text-decoration: none;
+    border-right: white;
+    
+}
+nav img{
+    float: left;
+    margin: 5px;
+    height: 45px;
+    width: auto;
+}
+.sign-in{
+    margin: 15px 15px;
+}
+li{
+    border-right: white;
+}
+
+/***************************************
+/* CONTAINER
+/***************************************/
+
+.container {
+    margin: 10px;
+    width: 49%;
+    height: 500px;
+    position: relative; 
+    float: left; 
+}
+.container > h2 {
+    color: rgb(71, 69, 69);
+    margin: 30px 0 20px 10px;
+    float: left;
+    font-size: 30px;
+}
+.first-txt {
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    color: #fff;
+    font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;
+    font-weight: 100;
+}
+p.first-txt {
+    position: absolute;
+    bottom: 45px;
+    left: 15px;
+    color: #7b7373;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    width: 50%;
+}
+span.first-txt {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    color: #7b7373;
+}
+.container img {
+    width: 80%;
+    height: 80%;
+}
+
+/******************************
+RIGHT 
+/******************************/
+
+.right {
+    margin: 10px;
+    width: 49%;
+    height: 500px;
+    position: relative; 
+    float: right; 
+}
+.date{
+    color: rgb(164, 166, 167);
+    margin: 30px 25px 30px 20px;
+    right: 0px;  
+    float: right;
+    font-size: 30px; 
+    position: absolute;
+}
+ 
+.right section{
+    width: 50%;
+    height: 41%;
+    float: left;
+    position: relative;  
+}
+
+.right img {
+    width: 98%;
+    height: 99%;
+}
+.right h3{
+    position: absolute;
+    color: rgb(244, 247, 248);
+    font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;
+    font-weight: 100;  
+    flex-wrap: wrap;
+    width: 250px;
+}
+.right span{
+    position: absolute;
+    color: rgb(83, 77, 77);
+    font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;
+    font-weight: 100;  
+    
+}
+.top-left{
+    top: 90px;
+    left: 10px;
+}
+#top-left{
+    margin-top: 75px;
+}
+.canada{
+    top: 170px;
+    left: 10px;
+}
+.top-right{
+    top: 84px;
+    left: 10px;
+}
+
+#top-right{
+    margin-top: 75px;
+}
+.health{
+    top: 170px;
+    left: 10px;
+}
+.bottom-left{
+    top: 115px;
+    left: 10px;
+}
+.worklife{
+    top: 170px;
+    left: 10px;
+}
+.bottom-right{
+    top: 84px;
+    left: 10px;
+}
+.culture{
+    top: 170px;
+    left: 10px;
+}
+
+/******************************
+BOTTOM 
+/******************************/
+
+h2{
+    margin: 20px 10px 5px 20px;
+}
+.bottom{
+    margin: 10px;
+    width: 100%;
+    height: 500px;
+    float: left;
+    position: relative; 
+   }
+.bottom > section{
+    width: 33.3333%;
+    height: 500px;
+    float: left;
+    position: relative; 
+}
+.bottom > section > img{
+    width: 75%;
+}
+.bottom > section > h3{
+    color: blue;
+    font-weight: 800;
+    float: left;
+    width: 75%;
+    position: relative;
+    flex-wrap: wrap;
+}
+.bottom > section > p{
+    width: 50%;
+}
+

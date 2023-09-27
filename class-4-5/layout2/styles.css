@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+header, footer {
+    background-color: lightgray;
+    border: 1px solid darkgray;
+    height: 50px;
+    clear: both;
+}
+.top {
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    height: 100px;
+}
+.left {
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    height: 150px;
+    width: 33.3333%;
+    float: left;
+}
+.right {
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    height: 150px;
+    width: 66.6666%;
+    float: right;
+}

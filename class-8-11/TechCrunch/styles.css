@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+    clear: both;
+}
+:root {
+    --wp--preset--font-size--normal: 16px;
+    --wp--preset--font-size--huge: 42px;
+}
+
+/****************************************
+/* LAYOUT
+/****************************************/
+body {
+    font: 1rem/1.77 "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+nav, main, aside {
+    float: left;
+    width: 10%;
+}
+main {
+    width: 50%;
+}
+aside {
+    width: 40%;
+}
+
+/****************************************
+/* Left Nav
+/****************************************/
+ 
+nav {
+    padding: 30px 30px 0px 30px;
+}
+
+a, li, form {
+    text-decoration: none;
+    list-style: none;
+    font-size: 25px;
+    margin: 14px 0px 0px -10px;
+    line-height: 1.5;
+    font-weight: 200;
+    color: #777;
+}
+a.login {
+    font-size: 17px;
+    margin: 10px 10px 0px -7px;
+}
+
+header > nav > img {
+    margin: 10px 10px 0 10px;
+    margin-right: 0px;
+    display: block;
+    box-sizing: inherit;
+    cursor: pointer;
+}
+form input {
+    border: none;
+    font-size: 22px;
+    margin: 0px;
+}
+/****************************************
+/* MAIN
+/****************************************/
+
+main {
+    position: relative;
+    padding: 30px 30px 0px 30px;
+}
+h1 {
+    font-size: 55px;
+    width: 100%;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -.05em;
+    font-family: "aktiv-grotesk",sans-serif;
+    margin: 2px 2px 5px 35px;
+}
+main > img {
+    width: 90%;
+    max-width: 100%;
+    height: 600px;
+    /* overflow: clip; */
+    overflow-clip-margin: content-box;
+    /* vertical-align: middle; */
+    /* float: inline-start; */
+    position: absolute;
+    left: 0;
+    margin-top: 30px;
+    margin-left: 35px;
+    padding: 0px 30px 0px 30px;
+}
+span{
+    float: left;
+    margin-left: 35px;
+}
+/****************************************
+/* RIGHT
+/****************************************/
+aside {
+    text-align: left;
+    position: relative;
+    
+    
+}
+h2 {
+height: auto;
+font-size: 35px;
+color: black;
+font-weight: 800;
+line-height: 1.1;
+position: relative;
+margin: 70px 2px 5px 35px;
+width: 65%;
+left:80px; top:2px
+}
+aside span {
+    margin: 5px 0px 10px 35px;
+    font-size: 17px;
+    color: black;
+    position: relative;
+    width: 65%;
+    left:80px; top:2px;
+    border-bottom: 1px solid #e8e4e4;
+}
+
+/****************************************
+/* BOTTOM
+/****************************************/
+
+.left {
+    float: left;
+    width: 25%;
+    margin: 35px 0px 0px -240px;
+}
+.bottom:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bottom span {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    margin: 55px 0px 200px 300px;
+}
+.left a {
+    font-size: 30px;
+    color: black;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: left;
+    margin: 2px 0px 0px 0px;
+
+}
+.left span {
+    margin: 0px 0px 0px 105px;
+    font-size: 15px;
+    color: black;
+    position: relative;
+}
+span.time {
+    margin: 0px 0px 0px 105px;
+    color: #c5bdbd;
+    position: relative;
+    float: left;
+    border-bottom: 1px solid #e8e4e4;
+}
+
+/****************************************
+/* CENTER
+/****************************************/
+
+.middle {
+    float: left;
+    width: 25%;
+    margin: 20px 20px 20px -10px;
+}
+p {
+    color: #777; 
+    /* width: 25%; */
+    font-size: 22px;
+    line-height: 1.2;
+    word-spacing: 1.5;
+    /* text-align: left; */
+    margin: 100px 0px 0px 10px;
+    width: 90%;
+    float: right;
+}
+
+/****************************************
+/* RIGHT
+/****************************************/
+
+.right {
+    float: left;
+    width: 25%;
+    margin: 20px 20px 20px -10px;
+}
+
+.right img {
+    width: 60%;
+    height: 15%;
+    float: right;
+    margin: 60px -50px -30px 20px;
+}

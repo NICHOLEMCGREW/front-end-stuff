@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+header, footer {
+    background: lightgray;
+    border: 1px solid darkgrey;
+    height: 100px;
+    clear: both;
+}
+section {
+    background: lightgray;
+    border: 1px solid darkgrey;
+    height: 200px;
+    width: 33.3333%;
+    float: left;
+}
+
+@media all and (max-width: 1024px) {
+    section {
+        background: rgb(124, 124, 230);
+    }
+}
+@media all and (min-width: 1800px) {
+    header {
+        background: rgb(216, 115, 216);
+    }
+}
+@media only screen and (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+}
+@media all and (min-width: 320px) and (max-width: 780px) {
+    header, footer {
+        border: 3px dashed black;
+    }
+}

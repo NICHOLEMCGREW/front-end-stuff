@@ -1,0 +1,322 @@
+    * {
+        box-sizing: border-box;
+    }
+    .clearfix::after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+    .clear {
+        clear: both;
+    }
+    /* body{
+        background-image: url("../imgs/background.png");
+    } */
+
+    a, li, *{
+        text-decoration: none;
+        list-style: none;
+    }
+    
+/***************************************
+/* HEADER
+/***************************************/
+nav{
+    display: block;
+    position: relative;
+    height: 50px;
+    transform: scaleX(-1);
+}
+.logo{
+    float: left;
+    padding-left: 4%;
+    height: 45px;
+}
+nav ul{
+    text-align: center;
+}
+nav li{
+    display: inline;
+}
+
+nav li a{
+    text-decoration: none;
+    color: black;
+    padding-right: 2%;
+}
+
+.shopping img{
+    margin-top: -10px;
+}
+/***************************************
+/* MAIN
+/***************************************/
+
+main{
+    background-image: url("../imgs/background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* padding-bottom: 5em; */
+    background-position: bottom -400px;
+    transform: scaleX(-1);
+    background-color: linear-gradient(#eceeee, #edf2f8);
+    display: block;
+    height: 450px;
+}
+.welcome{
+    transform: scaleX(-1);
+    height: 400px;
+    padding-right: 58%;
+    position: absolute;
+    float: left;
+    display: inline-block;
+}
+section.welcome h1{
+    width: 35%;
+    font-size: 57px;
+    display: inline-block;
+}
+.welcome input{
+   width: 250px;
+   height: 28px; 
+   display: inline-block;
+   float: left;
+}
+.welcome a.location{
+    background:  rgb(255, 123, 0);
+    color: white;
+    height: 28px;
+    width: 10%;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    font-weight: 550;
+}
+form{
+    padding-bottom: 4%;
+}
+.socials{
+    padding: 2.5% 5% 0% 0%;
+    display: inline-block;
+    color: black;
+    font-weight: 600;
+    float: left;
+}
+.socials i{
+    color:  rgb(255, 123, 0);
+}
+
+/***************************************
+/* DISCOVER
+/***************************************/
+
+.discover{
+    height: 450px;
+    width: 100%;
+    float: left;
+}
+.discover-l{
+    width: 33.33%;
+    height: inherit;
+    float: left;
+    background-image: url(../imgs/FLSAiBEXoAAtS93.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.discover-m{
+    float: right;
+    width: 66.66%;
+    height: 450px;
+    background-image: url(../imgs/bowl-of-oatmeal-with-fresh-berries.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom -550px right -500px;
+    background-color: #f3f5f5;
+}
+.discover-m-content{
+    padding: 2% 55% 1% 2%;
+}
+.discover-m span, .speciality span, .hours .book, .testimonials{
+    color:  rgb(255, 123, 0);
+    font-weight: 550;
+}
+.discover-m h2{
+    font-size: 60px;
+    margin-top: 1%;
+}
+.discover-m a{
+    color: white;
+    background-color: rgb(255, 123, 0);
+    padding: 1%;
+    display: inline-block;
+   float: left;
+   font-weight: 550;
+}
+.discover-m .arrow{
+    color: white;
+    background-color: orange;
+    padding: 1%;
+    float: left;
+}
+
+
+/***************************************
+/* SPECIALTY
+/***************************************/
+.speciality{
+    float: left;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    padding-top: 1%;
+    background: rgb(237,242,248);
+background: linear-gradient(90deg, rgba(237,242,248,1) 50%, rgba(236,238,238,1) 100%);
+}
+.speciality h3, .hours h3, h3{
+    font-size: 60px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-bottom: 1%;
+}
+.speciality ul li a{
+    padding: 0% 5% 0% 0%;
+    display: inline-block;
+    color: black;
+    font-weight: 600;
+    float: left;
+    text-align: center;
+    align-content: center;
+}
+.menu{
+    padding-left: 35%;
+    display: block;
+    text-align: center;
+    padding-top: 1%;
+}
+.speciality .orange, {
+    color: rgb(255, 123, 0);
+}
+.hr{
+    float: none;
+    width: 44%;
+    margin: 1% 15px;
+}
+
+.gallery{
+}
+.gallery img{
+    padding: 1%;
+
+}
+
+/***************************************
+/* HOURS
+/***************************************/
+
+.hours{
+    float: left;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    padding-top: 1%;
+    background: rgb(237,242,248);
+background: linear-gradient(90deg, rgba(237,242,248,1) 50%, rgba(236,238,238,1) 100%);
+}
+.fa-phone{
+    color: rgb(255, 123, 0);
+    border: 1px solid rgb(255, 123, 0);;
+    border-radius: 50%;
+    padding: .5%;
+    margin-bottom: .5%;
+}
+.phone-number{
+    color: rgb(255, 123, 0);
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    float: left;
+    padding-left: 46%;
+    padding-top: .2%;
+    padding-right: 1%;
+}
+.hours-left{
+    float: left;
+    padding-left: 25%;
+    width: 50%;
+}
+.hours-left span, .hours-right span{
+    font-size: 22px;
+    font-weight: bold;
+}
+.hours-right{
+    padding-right: 25%;
+    padding-top: 0%;
+    width: 50%;
+float: right;
+}
+.video img{
+    width: 25%;
+}
+
+/***************************************
+/* REVIEWS
+/***************************************/
+
+.customer-reviews{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.customer-reviews img{
+   width: 5%;
+    display: flex;
+    margin-left: 48%;
+    justify-content: center;
+
+}
+.name{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1.5%;
+    display: flex;
+    justify-content: center;
+
+}
+.title{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.stars{
+    padding-right: 1%;
+    padding-left: 0%;
+}
+.customer-reviews p{
+    display: flex;
+    width: 50%;
+    padding: 0 10%;
+    margin-left: 25%;
+}
+/***************************************
+/* MEDIA
+/***************************************/
+
+@media all and (max-width:500px){
+    main .welcome{
+        width: 100%;
+    }
+}
+@media all and (max-width: 850px){
+    main .hours{
+        width: 100%;
+    }
+}
+@media all and (max-width: 1024px){
+    main .hours{
+        width: 100%;
+    }
+}

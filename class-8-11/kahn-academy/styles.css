@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+    clear: both;
+}
+
+/***************************************
+/* LAYOUT 
+/***************************************/
+
+/***************************************
+/* NAVBAR 
+/***************************************/
+header {
+    border-bottom: 1px solid darkgray;
+    padding: 20px;
+}
+nav {
+    color: blue;
+    align-items: center;
+    padding-bottom: 10px;
+}
+header nav * {
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+}
+
+header nav > * {
+    float: left;
+    width: 10%;
+    margin: 0 5%;
+    list-style: none;
+    padding-bottom: 10px;
+}
+header nav {
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+header nav li {
+    float: left;
+    width: 33%;
+}
+main > section {
+    width: 50%;
+    height: 600px;
+    float: left;
+}
+.kahn{
+    width: 170px;
+}
+img {
+    width: 45%;
+}
+main > section h1, main > section img {
+    margin-top: 200px;
+}
+main section img {
+    float: right;
+}
+h1 {
+    font-size: 45px;
+    width: 30%;
+}
+p{
+    font-size: 15px;
+    width: 35%;
+    font-weight: 400;
+}
+main li {
+    float: left;
+    list-style: none;
+    width: 80px;
+    margin-top: 12px;
+}
+section li a {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    background-color: blue;
+    
+}
+footer {
+    background: rgb(216, 206, 206);
+    height: 250px;
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 20px;
+}
+footer h2 {
+    padding-top: 65px;
+}
+/***************************************
+/* ADDITIONAL STYLES     
+/***************************************/

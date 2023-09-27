@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    background: lightblue;
+    border: 2px solid plum;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+div {
+    background: lightcoral;
+    border: 4px solid green;
+    height: 100px;
+    width: 25%;  
+}
+
+.parent {
+    display: flex;
+    height: 300px; /* Or whatever */
+    background: lightgoldenrodyellow;
+    border: 4px dashed lightseagreen;
+  }
+  
+  .child {
+    width: 100px;  /* Or whatever */
+    height: 100px; /* Or whatever */
+    margin: auto;  /* Magic! */
+  }
+
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  li {
+    background: salmon;
+    border: 4px solid white;
+    height: 200px;
+    width: 200px;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    justify-content: flex-end;
+    border: 1px solid black;
+    height: 50px;
+  }
+
+  /* Medium screens */
+@media all and (max-width: 800px) {
+    .navigation {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }
+  }
+  /* Small screens */
+@media all and (max-width: 500px) {
+    .navigation {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid;
+    height: 200px;
+  }
+  
+  /* We tell all items to be 100% width, via flex-basis */
+  .wrapper > * {
+    flex: 1 100%;
+  }
+  
+  /* We rely on source order for mobile-first approach
+   * in this case:
+   * 1. header
+   * 2. article
+   * 3. aside 1
+   * 4. aside 2
+   * 5. footer
+   */
+  
+  /* Medium screens */
+  @media all and (min-width: 600px) {
+    /* We tell both sidebars to share a row */
+    .aside { flex: 1 auto; }
+  }
+  
+  /* Large screens */
+  @media all and (min-width: 800px) {
+    /* We invert order of first sidebar and main
+     * And tell the main element to take twice as much width as the other two sidebars 
+     */
+    .main { flex: 3 0px; }
+    .aside-1 { order: 1; }
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+  }
+  body {
+    text-align: center;
+    size: 25px;
+        
+  }
+  header { 
+    background: peachpuff;
+  }
+  section {
+    background: rgb(0, 106, 255);
+  }
+  .aside-1 {
+    background: yellow;
+  }
+  .aside-2 {
+    background: orchid;
+  }
+  footer {
+    background: lightgreen;
+  }
